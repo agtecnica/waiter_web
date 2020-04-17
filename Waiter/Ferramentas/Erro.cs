@@ -17,6 +17,7 @@ namespace GUI.Ferramentas
                 {
                     if (exception.InnerException.InnerException != null)
                     {
+                        ///teste de commirt
                         //MessageBoxEx.Show(@"Erro: " + exception.Message, @"Erro", exception.InnerException.InnerException.Message + ", " + exception.StackTrace, MessageIcon.Error, MessageButton.OK);
                     }
                     else
