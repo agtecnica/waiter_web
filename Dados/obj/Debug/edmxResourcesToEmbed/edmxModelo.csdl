@@ -1,0 +1,841 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SuppSysModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Categoria">
+    <Key>
+      <PropertyRef Name="CategoriaId" />
+    </Key>
+    <Property Name="CategoriaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descricao" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Produto" Relationship="Self.FK_Produto_CategoriaId" FromRole="Categoria" ToRole="Produto" />
+    <NavigationProperty Name="SubCategoria" Relationship="Self.FK_SubCategoria_Categoria" FromRole="Categoria" ToRole="SubCategoria" />
+  </EntityType>
+  <EntityType Name="Cidade">
+    <Key>
+      <PropertyRef Name="CidadeId" />
+    </Key>
+    <Property Name="CidadeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EstadoId" Type="Int32" Nullable="false" />
+    <Property Name="CodigoIbge" Type="Int32" />
+    <Property Name="DensidadeDemo" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="Gentilico" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Area" Type="Decimal" Precision="10" Scale="3" />
+    <NavigationProperty Name="Estado" Relationship="Self.FK_Cidade_Estado" FromRole="Cidade" ToRole="Estado" />
+    <NavigationProperty Name="Endereco" Relationship="Self.FK_Endereco_Cidade" FromRole="Cidade" ToRole="Endereco" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="ClienteId" />
+    </Key>
+    <Property Name="ClienteId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NomeRazaoSocial" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EnderecoId" Type="Int32" Nullable="false" />
+    <Property Name="ContatoId" Type="Int32" />
+    <Property Name="DocumentosId" Type="Int32" />
+    <Property Name="TipoPessoa" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Observacao" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="Ativo" Type="Boolean" Nullable="false" />
+    <Property Name="DadosBancariosId" Type="Int32" />
+    <Property Name="Sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Apelido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NomeFantasia" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Pedido" Relationship="Self.FK_Pedido_Cliente" FromRole="Cliente" ToRole="Pedido" />
+  </EntityType>
+  <EntityType Name="Contato">
+    <Key>
+      <PropertyRef Name="ContatoId" />
+    </Key>
+    <Property Name="ContatoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Telefone1" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Name="Telefone2" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Name="Celular1" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Celular2" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Site" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Facebook" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Twitter" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Youtube" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Instagram" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Fornecedor" Relationship="Self.FK_Fornecedor_Contato" FromRole="Contato" ToRole="Fornecedor" />
+    <NavigationProperty Name="Transportador" Relationship="Self.FK_Transportador_Contato" FromRole="Contato" ToRole="Transportador" />
+  </EntityType>
+  <EntityType Name="DadosBancarios">
+    <Key>
+      <PropertyRef Name="DadosBancariosId" />
+    </Key>
+    <Property Name="DadosBancariosId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Banco" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Agencia" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Conta" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Fornecedor" Relationship="Self.FK_Fornecedor_DadosBancarios" FromRole="DadosBancarios" ToRole="Fornecedor" />
+    <NavigationProperty Name="Transportador" Relationship="Self.FK_Transportador_DadosBancarios" FromRole="DadosBancarios" ToRole="Transportador" />
+  </EntityType>
+  <EntityType Name="Documentos">
+    <Key>
+      <PropertyRef Name="DocumentosId" />
+    </Key>
+    <Property Name="DocumentosId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RG" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="CPF" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="CNH" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TituloEleitor" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CertidaoMilitar" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Ctps" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SerieCtps" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="IE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CNPJ" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Empresa" Relationship="Self.FK_Empresa_Documentos" FromRole="Documentos" ToRole="Empresa" />
+    <NavigationProperty Name="Fornecedor" Relationship="Self.FK_Fornecedor_Documentos" FromRole="Documentos" ToRole="Fornecedor" />
+    <NavigationProperty Name="Transportador" Relationship="Self.FK_Transportador_Documentos" FromRole="Documentos" ToRole="Transportador" />
+  </EntityType>
+  <EntityType Name="Empresa">
+    <Key>
+      <PropertyRef Name="EmpresaId" />
+    </Key>
+    <Property Name="EmpresaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RazaoSocial" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EnderecoId" Type="Int32" Nullable="false" />
+    <Property Name="DocumentosId" Type="Int32" />
+    <Property Name="Logo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="Documentos" Relationship="Self.FK_Empresa_Documentos" FromRole="Empresa" ToRole="Documentos" />
+    <NavigationProperty Name="Endereco" Relationship="Self.FK_Endereco_Empresa" FromRole="Empresa" ToRole="Endereco" />
+    <NavigationProperty Name="EstoqueMovimentacao" Relationship="Self.FK_EstoqueMovimentacao_Empresa" FromRole="Empresa" ToRole="EstoqueMovimentacao" />
+  </EntityType>
+  <EntityType Name="Endereco">
+    <Key>
+      <PropertyRef Name="EnderecoId" />
+    </Key>
+    <Property Name="EnderecoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Logradouro" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Numero" Type="Int32" />
+    <Property Name="Complemento" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Cep" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Name="Bairro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CidadeId" Type="Int32" />
+    <Property Name="EstadoId" Type="Int32" />
+    <Property Name="PaisId" Type="Int32" />
+    <NavigationProperty Name="Cidade" Relationship="Self.FK_Endereco_Cidade" FromRole="Endereco" ToRole="Cidade" />
+    <NavigationProperty Name="Empresa" Relationship="Self.FK_Endereco_Empresa" FromRole="Endereco" ToRole="Empresa" />
+    <NavigationProperty Name="Estado" Relationship="Self.FK_Endereco_Estado" FromRole="Endereco" ToRole="Estado" />
+    <NavigationProperty Name="Fornecedor" Relationship="Self.FK_Fornecedor_Endereco" FromRole="Endereco" ToRole="Fornecedor" />
+    <NavigationProperty Name="Transportador" Relationship="Self.FK_Transportador_Endereco" FromRole="Endereco" ToRole="Transportador" />
+  </EntityType>
+  <EntityType Name="Estado">
+    <Key>
+      <PropertyRef Name="EstadoId" />
+    </Key>
+    <Property Name="EstadoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Sigla" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Regiao" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Cidade" Relationship="Self.FK_Cidade_Estado" FromRole="Estado" ToRole="Cidade" />
+    <NavigationProperty Name="Endereco" Relationship="Self.FK_Endereco_Estado" FromRole="Estado" ToRole="Endereco" />
+  </EntityType>
+  <EntityType Name="EstoqueMovimentacao">
+    <Key>
+      <PropertyRef Name="EstoqueMovimentacaoId" />
+    </Key>
+    <Property Name="EstoqueMovimentacaoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TipoMovimentacao" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="PedidoId" Type="Int32" Nullable="false" />
+    <Property Name="ProdutoId" Type="Int32" Nullable="false" />
+    <Property Name="Quantidade" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="MovimentoCancelado" Type="Boolean" />
+    <Property Name="EmpresaId" Type="Int32" />
+    <NavigationProperty Name="Empresa" Relationship="Self.FK_EstoqueMovimentacao_Empresa" FromRole="EstoqueMovimentacao" ToRole="Empresa" />
+    <NavigationProperty Name="Pedido" Relationship="Self.FK_EstoqueMovimentacao_Pedido" FromRole="EstoqueMovimentacao" ToRole="Pedido" />
+    <NavigationProperty Name="Produto" Relationship="Self.FK_EstoqueMovimentacao_Produto" FromRole="EstoqueMovimentacao" ToRole="Produto" />
+  </EntityType>
+  <EntityType Name="Fornecedor">
+    <Key>
+      <PropertyRef Name="FornecedorId" />
+    </Key>
+    <Property Name="FornecedorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NomeRazaoSocial" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EnderecoId" Type="Int32" Nullable="false" />
+    <Property Name="ContatoId" Type="Int32" />
+    <Property Name="DocumentosId" Type="Int32" />
+    <Property Name="TipoPessoa" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Observacao" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="Ativo" Type="Boolean" Nullable="false" />
+    <Property Name="DadosBancariosId" Type="Int32" />
+    <NavigationProperty Name="Contato" Relationship="Self.FK_Fornecedor_Contato" FromRole="Fornecedor" ToRole="Contato" />
+    <NavigationProperty Name="DadosBancarios" Relationship="Self.FK_Fornecedor_DadosBancarios" FromRole="Fornecedor" ToRole="DadosBancarios" />
+    <NavigationProperty Name="Documentos" Relationship="Self.FK_Fornecedor_Documentos" FromRole="Fornecedor" ToRole="Documentos" />
+    <NavigationProperty Name="Endereco" Relationship="Self.FK_Fornecedor_Endereco" FromRole="Fornecedor" ToRole="Endereco" />
+    <NavigationProperty Name="Pedido" Relationship="Self.FK_Pedido_Fornecedor" FromRole="Fornecedor" ToRole="Pedido" />
+    <NavigationProperty Name="Produto" Relationship="Self.FK_Produto_Fornecedor" FromRole="Fornecedor" ToRole="Produto" />
+  </EntityType>
+  <EntityType Name="Marca">
+    <Key>
+      <PropertyRef Name="MarcaId" />
+    </Key>
+    <Property Name="MarcaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descricao" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Produto" Relationship="Self.FK_Produto_Marca" FromRole="Marca" ToRole="Produto" />
+  </EntityType>
+  <EntityType Name="Pedido">
+    <Key>
+      <PropertyRef Name="PedidoId" />
+    </Key>
+    <Property Name="PedidoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tipo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="DataEmissao" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ClienteId" Type="Int32" />
+    <Property Name="FornecedorId" Type="Int32" />
+    <Property Name="UsuarioId" Type="Int32" Nullable="false" />
+    <Property Name="NumeroNf" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ValorTotal" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="StatusPedidoId" Type="Int32" Nullable="false" />
+    <Property Name="NrParcelas" Type="Int32" />
+    <Property Name="DataCancelamento" Type="DateTime" Precision="3" />
+    <Property Name="NrOrcamentoFornecedor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ValidadeProposta" Type="DateTime" Precision="0" />
+    <Property Name="Frete" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="TransportadorId" Type="Int32" />
+    <Property Name="ValorFrete" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IsCotacao" Type="Boolean" Nullable="false" />
+    <Property Name="DataInicialPgto" Type="DateTime" Precision="3" />
+    <Property Name="Observacao" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="Desconto" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Acrescimo" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Lote" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Cliente" Relationship="Self.FK_Pedido_Cliente" FromRole="Pedido" ToRole="Cliente" />
+    <NavigationProperty Name="EstoqueMovimentacao" Relationship="Self.FK_EstoqueMovimentacao_Pedido" FromRole="Pedido" ToRole="EstoqueMovimentacao" />
+    <NavigationProperty Name="Fornecedor" Relationship="Self.FK_Pedido_Fornecedor" FromRole="Pedido" ToRole="Fornecedor" />
+    <NavigationProperty Name="StatusPedido" Relationship="Self.FK_Pedido_StatusPedido" FromRole="Pedido" ToRole="StatusPedido" />
+    <NavigationProperty Name="Transportador" Relationship="Self.FK_Pedido_Transportador" FromRole="Pedido" ToRole="Transportador" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_Pedido_Usuario" FromRole="Pedido" ToRole="Usuario" />
+    <NavigationProperty Name="PedidoItem" Relationship="Self.FK_PedidoItem_Pedido" FromRole="Pedido" ToRole="PedidoItem" />
+  </EntityType>
+  <EntityType Name="PedidoItem">
+    <Key>
+      <PropertyRef Name="PedidoItemId" />
+    </Key>
+    <Property Name="PedidoItemId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PedidoId" Type="Int32" Nullable="false" />
+    <Property Name="ProdutoId" Type="Int32" Nullable="false" />
+    <Property Name="Quantidade" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="PerctDesconto" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="PerctAcrescimo" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="ValorDesconto" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SubTotal" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DiasPrevisaoEntrega" Type="Int16" />
+    <Property Name="DataEntrega" Type="DateTime" Precision="0" />
+    <Property Name="ObservacaoItem" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Pedido" Relationship="Self.FK_PedidoItem_Pedido" FromRole="PedidoItem" ToRole="Pedido" />
+    <NavigationProperty Name="Produto" Relationship="Self.FK_PedidoItem_Produto" FromRole="PedidoItem" ToRole="Produto" />
+  </EntityType>
+  <EntityType Name="Produto">
+    <Key>
+      <PropertyRef Name="ProdutoId" />
+    </Key>
+    <Property Name="ProdutoId" Type="Int32" Nullable="false" />
+    <Property Name="Descricao" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ValorCompra" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CategoriaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SubCategoriaId" Type="Int32" />
+    <Property Name="ValorVenda" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CodigoBarras" Type="Decimal" Precision="13" Scale="0" />
+    <Property Name="UnidMedidaId" Type="Int32" />
+    <Property Name="QtdeUnitaria" Type="Byte" />
+    <Property Name="QtdeMaster" Type="Byte" />
+    <Property Name="MarcaId" Type="Int32" />
+    <Property Name="FornecedorId" Type="Int32" Nullable="false" />
+    <Property Name="Descontinuado" Type="Boolean" />
+    <Property Name="Lucro" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="QtdeMinEstoque" Type="Byte" />
+    <Property Name="QtdeMaxEstoque" Type="Byte" />
+    <Property Name="PrazoValidade" Type="Int16" />
+    <Property Name="Bloqueado" Type="Boolean" />
+    <NavigationProperty Name="Categoria" Relationship="Self.FK_Produto_CategoriaId" FromRole="Produto" ToRole="Categoria" />
+    <NavigationProperty Name="EstoqueMovimentacao" Relationship="Self.FK_EstoqueMovimentacao_Produto" FromRole="Produto" ToRole="EstoqueMovimentacao" />
+    <NavigationProperty Name="Fornecedor" Relationship="Self.FK_Produto_Fornecedor" FromRole="Produto" ToRole="Fornecedor" />
+    <NavigationProperty Name="Marca" Relationship="Self.FK_Produto_Marca" FromRole="Produto" ToRole="Marca" />
+    <NavigationProperty Name="PedidoItem" Relationship="Self.FK_PedidoItem_Produto" FromRole="Produto" ToRole="PedidoItem" />
+    <NavigationProperty Name="Estoque" Relationship="Self.FK_Estoque_Produto" FromRole="Produto" ToRole="Estoque" />
+    <NavigationProperty Name="SubCategoria" Relationship="Self.FK_Produto_SubCategoria" FromRole="Produto" ToRole="SubCategoria" />
+    <NavigationProperty Name="UnidadeMedida" Relationship="Self.FK_Produto_UnidadeMedida" FromRole="Produto" ToRole="UnidadeMedida" />
+    <Property Name="Ativo" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="StatusPedido">
+    <Key>
+      <PropertyRef Name="StatusPedidoId" />
+    </Key>
+    <Property Name="StatusPedidoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descricao" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Pedido" Relationship="Self.FK_Pedido_StatusPedido" FromRole="StatusPedido" ToRole="Pedido" />
+  </EntityType>
+  <EntityType Name="SubCategoria">
+    <Key>
+      <PropertyRef Name="SubCategoriaId" />
+    </Key>
+    <Property Name="SubCategoriaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descricao" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CategoriaId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Categoria" Relationship="Self.FK_SubCategoria_Categoria" FromRole="SubCategoria" ToRole="Categoria" />
+    <NavigationProperty Name="Produto" Relationship="Self.FK_Produto_SubCategoria" FromRole="SubCategoria" ToRole="Produto" />
+  </EntityType>
+  <EntityType Name="Transportador">
+    <Key>
+      <PropertyRef Name="TransportadorId" />
+    </Key>
+    <Property Name="TransportadorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NomeRazaoSocial" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EnderecoId" Type="Int32" Nullable="false" />
+    <Property Name="ContatoId" Type="Int32" />
+    <Property Name="DocumentosId" Type="Int32" />
+    <Property Name="TipoPessoa" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Observacao" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="Ativo" Type="Boolean" Nullable="false" />
+    <Property Name="DadosBancariosId" Type="Int32" />
+    <NavigationProperty Name="Contato" Relationship="Self.FK_Transportador_Contato" FromRole="Transportador" ToRole="Contato" />
+    <NavigationProperty Name="DadosBancarios" Relationship="Self.FK_Transportador_DadosBancarios" FromRole="Transportador" ToRole="DadosBancarios" />
+    <NavigationProperty Name="Documentos" Relationship="Self.FK_Transportador_Documentos" FromRole="Transportador" ToRole="Documentos" />
+    <NavigationProperty Name="Endereco" Relationship="Self.FK_Transportador_Endereco" FromRole="Transportador" ToRole="Endereco" />
+    <NavigationProperty Name="Pedido" Relationship="Self.FK_Pedido_Transportador" FromRole="Transportador" ToRole="Pedido" />
+  </EntityType>
+  <EntityType Name="UnidadeMedida">
+    <Key>
+      <PropertyRef Name="UnidadeMedidaId" />
+    </Key>
+    <Property Name="UnidadeMedidaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descricao" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Produto" Relationship="Self.FK_Produto_UnidadeMedida" FromRole="UnidadeMedida" ToRole="Produto" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="UsuarioId" />
+    </Key>
+    <Property Name="UsuarioId" Type="Int32" Nullable="false" />
+    <Property Name="Nome" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Login" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Senha" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Ativo" Type="Boolean" Nullable="false" />
+    <Property Name="Tentativas" Type="Int16" />
+    <Property Name="Observacao" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="DataExpiraSenha" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Pedido" Relationship="Self.FK_Pedido_Usuario" FromRole="Usuario" ToRole="Pedido" />
+  </EntityType>
+  <EntityType Name="Estoque">
+    <Key>
+      <PropertyRef Name="ProdutoId" />
+      <PropertyRef Name="EstoqueReal" />
+      <PropertyRef Name="EstoqueDisponivel" />
+    </Key>
+    <Property Name="ProdutoId" Type="Int32" Nullable="false" />
+    <Property Name="FornecedorId" Type="Int32" />
+    <Property Name="DataUltEntrada" Type="DateTime" Precision="3" />
+    <Property Name="DataUltSaida" Type="DateTime" Precision="3" />
+    <Property Name="QtdeUltEntrada" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="QtdeUltSaida" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="EstoqueReservado" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="EstoqueReal" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="EstoqueDisponivel" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="EmpresaId" Type="Int32" />
+    <NavigationProperty Name="Produto" Relationship="Self.FK_Estoque_Produto" FromRole="Estoque" ToRole="Produto" />
+  </EntityType>
+  <Association Name="FK_Produto_CategoriaId">
+    <End Role="Categoria" Type="Self.Categoria" Multiplicity="1" />
+    <End Role="Produto" Type="Self.Produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categoria">
+        <PropertyRef Name="CategoriaId" />
+      </Principal>
+      <Dependent Role="Produto">
+        <PropertyRef Name="CategoriaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubCategoria_Categoria">
+    <End Role="Categoria" Type="Self.Categoria" Multiplicity="1" />
+    <End Role="SubCategoria" Type="Self.SubCategoria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categoria">
+        <PropertyRef Name="CategoriaId" />
+      </Principal>
+      <Dependent Role="SubCategoria">
+        <PropertyRef Name="CategoriaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cidade_Estado">
+    <End Role="Estado" Type="Self.Estado" Multiplicity="1" />
+    <End Role="Cidade" Type="Self.Cidade" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="EstadoId" />
+      </Principal>
+      <Dependent Role="Cidade">
+        <PropertyRef Name="EstadoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Endereco_Cidade">
+    <End Role="Cidade" Type="Self.Cidade" Multiplicity="0..1" />
+    <End Role="Endereco" Type="Self.Endereco" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cidade">
+        <PropertyRef Name="CidadeId" />
+      </Principal>
+      <Dependent Role="Endereco">
+        <PropertyRef Name="CidadeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pedido_Cliente">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
+    <End Role="Pedido" Type="Self.Pedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="ClienteId" />
+      </Principal>
+      <Dependent Role="Pedido">
+        <PropertyRef Name="ClienteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fornecedor_Contato">
+    <End Role="Contato" Type="Self.Contato" Multiplicity="0..1" />
+    <End Role="Fornecedor" Type="Self.Fornecedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contato">
+        <PropertyRef Name="ContatoId" />
+      </Principal>
+      <Dependent Role="Fornecedor">
+        <PropertyRef Name="ContatoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transportador_Contato">
+    <End Role="Contato" Type="Self.Contato" Multiplicity="0..1" />
+    <End Role="Transportador" Type="Self.Transportador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contato">
+        <PropertyRef Name="ContatoId" />
+      </Principal>
+      <Dependent Role="Transportador">
+        <PropertyRef Name="ContatoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fornecedor_DadosBancarios">
+    <End Role="DadosBancarios" Type="Self.DadosBancarios" Multiplicity="0..1" />
+    <End Role="Fornecedor" Type="Self.Fornecedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DadosBancarios">
+        <PropertyRef Name="DadosBancariosId" />
+      </Principal>
+      <Dependent Role="Fornecedor">
+        <PropertyRef Name="DadosBancariosId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transportador_DadosBancarios">
+    <End Role="DadosBancarios" Type="Self.DadosBancarios" Multiplicity="0..1" />
+    <End Role="Transportador" Type="Self.Transportador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DadosBancarios">
+        <PropertyRef Name="DadosBancariosId" />
+      </Principal>
+      <Dependent Role="Transportador">
+        <PropertyRef Name="DadosBancariosId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Empresa_Documentos">
+    <End Role="Documentos" Type="Self.Documentos" Multiplicity="0..1" />
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Documentos">
+        <PropertyRef Name="DocumentosId" />
+      </Principal>
+      <Dependent Role="Empresa">
+        <PropertyRef Name="DocumentosId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fornecedor_Documentos">
+    <End Role="Documentos" Type="Self.Documentos" Multiplicity="0..1" />
+    <End Role="Fornecedor" Type="Self.Fornecedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Documentos">
+        <PropertyRef Name="DocumentosId" />
+      </Principal>
+      <Dependent Role="Fornecedor">
+        <PropertyRef Name="DocumentosId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transportador_Documentos">
+    <End Role="Documentos" Type="Self.Documentos" Multiplicity="0..1" />
+    <End Role="Transportador" Type="Self.Transportador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Documentos">
+        <PropertyRef Name="DocumentosId" />
+      </Principal>
+      <Dependent Role="Transportador">
+        <PropertyRef Name="DocumentosId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Endereco_Empresa">
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="1" />
+    <End Role="Endereco" Type="Self.Endereco" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="EmpresaId" />
+      </Principal>
+      <Dependent Role="Endereco">
+        <PropertyRef Name="EnderecoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstoqueMovimentacao_Empresa">
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="0..1" />
+    <End Role="EstoqueMovimentacao" Type="Self.EstoqueMovimentacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="EmpresaId" />
+      </Principal>
+      <Dependent Role="EstoqueMovimentacao">
+        <PropertyRef Name="EmpresaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Endereco_Estado">
+    <End Role="Estado" Type="Self.Estado" Multiplicity="0..1" />
+    <End Role="Endereco" Type="Self.Endereco" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="EstadoId" />
+      </Principal>
+      <Dependent Role="Endereco">
+        <PropertyRef Name="EstadoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fornecedor_Endereco">
+    <End Role="Endereco" Type="Self.Endereco" Multiplicity="1" />
+    <End Role="Fornecedor" Type="Self.Fornecedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Endereco">
+        <PropertyRef Name="EnderecoId" />
+      </Principal>
+      <Dependent Role="Fornecedor">
+        <PropertyRef Name="EnderecoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transportador_Endereco">
+    <End Role="Endereco" Type="Self.Endereco" Multiplicity="1" />
+    <End Role="Transportador" Type="Self.Transportador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Endereco">
+        <PropertyRef Name="EnderecoId" />
+      </Principal>
+      <Dependent Role="Transportador">
+        <PropertyRef Name="EnderecoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstoqueMovimentacao_Pedido">
+    <End Role="Pedido" Type="Self.Pedido" Multiplicity="1" />
+    <End Role="EstoqueMovimentacao" Type="Self.EstoqueMovimentacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pedido">
+        <PropertyRef Name="PedidoId" />
+      </Principal>
+      <Dependent Role="EstoqueMovimentacao">
+        <PropertyRef Name="PedidoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstoqueMovimentacao_Produto">
+    <End Role="Produto" Type="Self.Produto" Multiplicity="1" />
+    <End Role="EstoqueMovimentacao" Type="Self.EstoqueMovimentacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produto">
+        <PropertyRef Name="ProdutoId" />
+      </Principal>
+      <Dependent Role="EstoqueMovimentacao">
+        <PropertyRef Name="ProdutoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pedido_Fornecedor">
+    <End Role="Fornecedor" Type="Self.Fornecedor" Multiplicity="0..1" />
+    <End Role="Pedido" Type="Self.Pedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fornecedor">
+        <PropertyRef Name="FornecedorId" />
+      </Principal>
+      <Dependent Role="Pedido">
+        <PropertyRef Name="FornecedorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Produto_Fornecedor">
+    <End Role="Fornecedor" Type="Self.Fornecedor" Multiplicity="1" />
+    <End Role="Produto" Type="Self.Produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fornecedor">
+        <PropertyRef Name="FornecedorId" />
+      </Principal>
+      <Dependent Role="Produto">
+        <PropertyRef Name="FornecedorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Produto_Marca">
+    <End Role="Marca" Type="Self.Marca" Multiplicity="0..1" />
+    <End Role="Produto" Type="Self.Produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Marca">
+        <PropertyRef Name="MarcaId" />
+      </Principal>
+      <Dependent Role="Produto">
+        <PropertyRef Name="MarcaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pedido_StatusPedido">
+    <End Role="StatusPedido" Type="Self.StatusPedido" Multiplicity="1" />
+    <End Role="Pedido" Type="Self.Pedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusPedido">
+        <PropertyRef Name="StatusPedidoId" />
+      </Principal>
+      <Dependent Role="Pedido">
+        <PropertyRef Name="StatusPedidoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pedido_Transportador">
+    <End Role="Transportador" Type="Self.Transportador" Multiplicity="0..1" />
+    <End Role="Pedido" Type="Self.Pedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transportador">
+        <PropertyRef Name="TransportadorId" />
+      </Principal>
+      <Dependent Role="Pedido">
+        <PropertyRef Name="TransportadorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pedido_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Pedido" Type="Self.Pedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UsuarioId" />
+      </Principal>
+      <Dependent Role="Pedido">
+        <PropertyRef Name="UsuarioId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PedidoItem_Pedido">
+    <End Role="Pedido" Type="Self.Pedido" Multiplicity="1" />
+    <End Role="PedidoItem" Type="Self.PedidoItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pedido">
+        <PropertyRef Name="PedidoId" />
+      </Principal>
+      <Dependent Role="PedidoItem">
+        <PropertyRef Name="PedidoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PedidoItem_Produto">
+    <End Role="Produto" Type="Self.Produto" Multiplicity="1" />
+    <End Role="PedidoItem" Type="Self.PedidoItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produto">
+        <PropertyRef Name="ProdutoId" />
+      </Principal>
+      <Dependent Role="PedidoItem">
+        <PropertyRef Name="ProdutoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Estoque_Produto">
+    <End Role="Produto" Type="Self.Produto" Multiplicity="1" />
+    <End Role="Estoque" Type="Self.Estoque" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produto">
+        <PropertyRef Name="ProdutoId" />
+      </Principal>
+      <Dependent Role="Estoque">
+        <PropertyRef Name="ProdutoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Produto_SubCategoria">
+    <End Role="SubCategoria" Type="Self.SubCategoria" Multiplicity="0..1" />
+    <End Role="Produto" Type="Self.Produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubCategoria">
+        <PropertyRef Name="SubCategoriaId" />
+      </Principal>
+      <Dependent Role="Produto">
+        <PropertyRef Name="SubCategoriaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Produto_UnidadeMedida">
+    <End Role="UnidadeMedida" Type="Self.UnidadeMedida" Multiplicity="0..1" />
+    <End Role="Produto" Type="Self.Produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UnidadeMedida">
+        <PropertyRef Name="UnidadeMedidaId" />
+      </Principal>
+      <Dependent Role="Produto">
+        <PropertyRef Name="UnidMedidaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Categoria" EntityType="Self.Categoria" />
+    <EntitySet Name="Cidade" EntityType="Self.Cidade" />
+    <EntitySet Name="Cliente" EntityType="Self.Cliente" />
+    <EntitySet Name="Contato" EntityType="Self.Contato" />
+    <EntitySet Name="DadosBancarios" EntityType="Self.DadosBancarios" />
+    <EntitySet Name="Documentos" EntityType="Self.Documentos" />
+    <EntitySet Name="Empresa" EntityType="Self.Empresa" />
+    <EntitySet Name="Endereco" EntityType="Self.Endereco" />
+    <EntitySet Name="Estado" EntityType="Self.Estado" />
+    <EntitySet Name="EstoqueMovimentacao" EntityType="Self.EstoqueMovimentacao" />
+    <EntitySet Name="Fornecedor" EntityType="Self.Fornecedor" />
+    <EntitySet Name="Marca" EntityType="Self.Marca" />
+    <EntitySet Name="Pedido" EntityType="Self.Pedido" />
+    <EntitySet Name="PedidoItem" EntityType="Self.PedidoItem" />
+    <EntitySet Name="Produto" EntityType="Self.Produto" />
+    <EntitySet Name="StatusPedido" EntityType="Self.StatusPedido" />
+    <EntitySet Name="SubCategoria" EntityType="Self.SubCategoria" />
+    <EntitySet Name="Transportador" EntityType="Self.Transportador" />
+    <EntitySet Name="UnidadeMedida" EntityType="Self.UnidadeMedida" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" />
+    <EntitySet Name="Estoque" EntityType="Self.Estoque" />
+    <AssociationSet Name="FK_Produto_CategoriaId" Association="Self.FK_Produto_CategoriaId">
+      <End Role="Categoria" EntitySet="Categoria" />
+      <End Role="Produto" EntitySet="Produto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubCategoria_Categoria" Association="Self.FK_SubCategoria_Categoria">
+      <End Role="Categoria" EntitySet="Categoria" />
+      <End Role="SubCategoria" EntitySet="SubCategoria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cidade_Estado" Association="Self.FK_Cidade_Estado">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Cidade" EntitySet="Cidade" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Endereco_Cidade" Association="Self.FK_Endereco_Cidade">
+      <End Role="Cidade" EntitySet="Cidade" />
+      <End Role="Endereco" EntitySet="Endereco" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pedido_Cliente" Association="Self.FK_Pedido_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Pedido" EntitySet="Pedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fornecedor_Contato" Association="Self.FK_Fornecedor_Contato">
+      <End Role="Contato" EntitySet="Contato" />
+      <End Role="Fornecedor" EntitySet="Fornecedor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transportador_Contato" Association="Self.FK_Transportador_Contato">
+      <End Role="Contato" EntitySet="Contato" />
+      <End Role="Transportador" EntitySet="Transportador" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fornecedor_DadosBancarios" Association="Self.FK_Fornecedor_DadosBancarios">
+      <End Role="DadosBancarios" EntitySet="DadosBancarios" />
+      <End Role="Fornecedor" EntitySet="Fornecedor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transportador_DadosBancarios" Association="Self.FK_Transportador_DadosBancarios">
+      <End Role="DadosBancarios" EntitySet="DadosBancarios" />
+      <End Role="Transportador" EntitySet="Transportador" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Empresa_Documentos" Association="Self.FK_Empresa_Documentos">
+      <End Role="Documentos" EntitySet="Documentos" />
+      <End Role="Empresa" EntitySet="Empresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fornecedor_Documentos" Association="Self.FK_Fornecedor_Documentos">
+      <End Role="Documentos" EntitySet="Documentos" />
+      <End Role="Fornecedor" EntitySet="Fornecedor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transportador_Documentos" Association="Self.FK_Transportador_Documentos">
+      <End Role="Documentos" EntitySet="Documentos" />
+      <End Role="Transportador" EntitySet="Transportador" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Endereco_Empresa" Association="Self.FK_Endereco_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Endereco" EntitySet="Endereco" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstoqueMovimentacao_Empresa" Association="Self.FK_EstoqueMovimentacao_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="EstoqueMovimentacao" EntitySet="EstoqueMovimentacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Endereco_Estado" Association="Self.FK_Endereco_Estado">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Endereco" EntitySet="Endereco" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fornecedor_Endereco" Association="Self.FK_Fornecedor_Endereco">
+      <End Role="Endereco" EntitySet="Endereco" />
+      <End Role="Fornecedor" EntitySet="Fornecedor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transportador_Endereco" Association="Self.FK_Transportador_Endereco">
+      <End Role="Endereco" EntitySet="Endereco" />
+      <End Role="Transportador" EntitySet="Transportador" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstoqueMovimentacao_Pedido" Association="Self.FK_EstoqueMovimentacao_Pedido">
+      <End Role="Pedido" EntitySet="Pedido" />
+      <End Role="EstoqueMovimentacao" EntitySet="EstoqueMovimentacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstoqueMovimentacao_Produto" Association="Self.FK_EstoqueMovimentacao_Produto">
+      <End Role="Produto" EntitySet="Produto" />
+      <End Role="EstoqueMovimentacao" EntitySet="EstoqueMovimentacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pedido_Fornecedor" Association="Self.FK_Pedido_Fornecedor">
+      <End Role="Fornecedor" EntitySet="Fornecedor" />
+      <End Role="Pedido" EntitySet="Pedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Produto_Fornecedor" Association="Self.FK_Produto_Fornecedor">
+      <End Role="Fornecedor" EntitySet="Fornecedor" />
+      <End Role="Produto" EntitySet="Produto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Produto_Marca" Association="Self.FK_Produto_Marca">
+      <End Role="Marca" EntitySet="Marca" />
+      <End Role="Produto" EntitySet="Produto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pedido_StatusPedido" Association="Self.FK_Pedido_StatusPedido">
+      <End Role="StatusPedido" EntitySet="StatusPedido" />
+      <End Role="Pedido" EntitySet="Pedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pedido_Transportador" Association="Self.FK_Pedido_Transportador">
+      <End Role="Transportador" EntitySet="Transportador" />
+      <End Role="Pedido" EntitySet="Pedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pedido_Usuario" Association="Self.FK_Pedido_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Pedido" EntitySet="Pedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PedidoItem_Pedido" Association="Self.FK_PedidoItem_Pedido">
+      <End Role="Pedido" EntitySet="Pedido" />
+      <End Role="PedidoItem" EntitySet="PedidoItem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PedidoItem_Produto" Association="Self.FK_PedidoItem_Produto">
+      <End Role="Produto" EntitySet="Produto" />
+      <End Role="PedidoItem" EntitySet="PedidoItem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Estoque_Produto" Association="Self.FK_Estoque_Produto">
+      <End Role="Produto" EntitySet="Produto" />
+      <End Role="Estoque" EntitySet="Estoque" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Produto_SubCategoria" Association="Self.FK_Produto_SubCategoria">
+      <End Role="SubCategoria" EntitySet="SubCategoria" />
+      <End Role="Produto" EntitySet="Produto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Produto_UnidadeMedida" Association="Self.FK_Produto_UnidadeMedida">
+      <End Role="UnidadeMedida" EntitySet="UnidadeMedida" />
+      <End Role="Produto" EntitySet="Produto" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

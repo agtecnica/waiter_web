@@ -1,0 +1,14 @@
+C:\Users\Andre Alves\SisPdv\SuppSys\Negocio\bin\Release\Negocio.dll
+C:\Users\Andre Alves\SisPdv\SuppSys\Negocio\bin\Release\Negocio.pdb
+C:\Users\Andre Alves\SisPdv\SuppSys\Negocio\bin\Release\Dados.dll
+C:\Users\Andre Alves\SisPdv\SuppSys\Negocio\bin\Release\Modelo.dll
+C:\Users\Andre Alves\SisPdv\SuppSys\Negocio\bin\Release\EntityFramework.dll
+C:\Users\Andre Alves\SisPdv\SuppSys\Negocio\bin\Release\Dados.pdb
+C:\Users\Andre Alves\SisPdv\SuppSys\Negocio\bin\Release\Dados.dll.config
+C:\Users\Andre Alves\SisPdv\SuppSys\Negocio\bin\Release\Modelo.pdb
+C:\Users\Andre Alves\SisPdv\SuppSys\Negocio\bin\Release\Modelo.dll.config
+C:\Users\Andre Alves\SisPdv\SuppSys\Negocio\bin\Release\EntityFramework.xml
+C:\Users\Andre Alves\SisPdv\SuppSys\Negocio\obj\Release\Negocio.csprojResolveAssemblyReference.cache
+C:\Users\Andre Alves\SisPdv\SuppSys\Negocio\obj\Release\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Andre Alves\SisPdv\SuppSys\Negocio\obj\Release\Negocio.dll
+C:\Users\Andre Alves\SisPdv\SuppSys\Negocio\obj\Release\Negocio.pdb

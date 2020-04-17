@@ -1,0 +1,67 @@
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Modelo\bin\Debug\Modelo.dll
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Modelo\bin\Debug\EntityFramework.dll
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Modelo\bin\Debug\EntityFramework.xml
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Modelo\obj\Debug\Modelo.dll
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Modelo\obj\Debug\Modelo.pdb
+C:\Users\servidor\Google Drive\SuppSys\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\servidor\Google Drive\SuppSys\Modelo\bin\Debug\Modelo.dll
+C:\Users\servidor\Google Drive\SuppSys\Modelo\bin\Debug\Modelo.pdb
+C:\Users\servidor\Google Drive\SuppSys\Modelo\bin\Debug\EntityFramework.dll
+C:\Users\servidor\Google Drive\SuppSys\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\servidor\Google Drive\SuppSys\Modelo\bin\Debug\EntityFramework.xml
+C:\Users\servidor\Google Drive\SuppSys\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\servidor\Google Drive\SuppSys\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+C:\Users\servidor\Google Drive\SuppSys\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\servidor\Google Drive\SuppSys\Modelo\obj\Debug\Modelo.dll
+C:\Users\servidor\Google Drive\SuppSys\Modelo\obj\Debug\Modelo.pdb
+E:\Projetos de Programação\SuppSys\Modelo\bin\Debug\Modelo.dll.config
+E:\Projetos de Programação\SuppSys\Modelo\bin\Debug\Modelo.dll
+E:\Projetos de Programação\SuppSys\Modelo\bin\Debug\Modelo.pdb
+E:\Projetos de Programação\SuppSys\Modelo\bin\Debug\EntityFramework.dll
+E:\Projetos de Programação\SuppSys\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+E:\Projetos de Programação\SuppSys\Modelo\bin\Debug\EntityFramework.xml
+E:\Projetos de Programação\SuppSys\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+E:\Projetos de Programação\SuppSys\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+E:\Projetos de Programação\SuppSys\Modelo\obj\Debug\Modelo.dll
+E:\Projetos de Programação\SuppSys\Modelo\obj\Debug\Modelo.pdb
+E:\Projetos de Programação\SuppSys\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+C:\Users\servidor\Desktop\SuppSys\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\servidor\Desktop\SuppSys\Modelo\bin\Debug\Modelo.dll
+C:\Users\servidor\Desktop\SuppSys\Modelo\bin\Debug\Modelo.pdb
+C:\Users\servidor\Desktop\SuppSys\Modelo\bin\Debug\EntityFramework.dll
+C:\Users\servidor\Desktop\SuppSys\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\servidor\Desktop\SuppSys\Modelo\bin\Debug\EntityFramework.xml
+C:\Users\servidor\Desktop\SuppSys\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\servidor\Desktop\SuppSys\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+C:\Users\servidor\Desktop\SuppSys\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\servidor\Desktop\SuppSys\Modelo\obj\Debug\Modelo.dll
+C:\Users\servidor\Desktop\SuppSys\Modelo\obj\Debug\Modelo.pdb
+C:\Users\Andre Alves\SisPdv\SuppSys\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\Andre Alves\SisPdv\SuppSys\Modelo\bin\Debug\Modelo.dll
+C:\Users\Andre Alves\SisPdv\SuppSys\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Andre Alves\SisPdv\SuppSys\Modelo\bin\Debug\EntityFramework.dll
+C:\Users\Andre Alves\SisPdv\SuppSys\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Andre Alves\SisPdv\SuppSys\Modelo\bin\Debug\EntityFramework.xml
+C:\Users\Andre Alves\SisPdv\SuppSys\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Andre Alves\SisPdv\SuppSys\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+C:\Users\Andre Alves\SisPdv\SuppSys\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\Andre Alves\SisPdv\SuppSys\Modelo\obj\Debug\Modelo.dll
+C:\Users\Andre Alves\SisPdv\SuppSys\Modelo\obj\Debug\Modelo.pdb
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Modelo\bin\Debug\Modelo.dll.config
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Modelo\bin\Debug\Modelo.dll
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Modelo\bin\Debug\Modelo.pdb
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Modelo\bin\Debug\EntityFramework.dll
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Modelo\bin\Debug\EntityFramework.xml
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Modelo\obj\Debug\Modelo.csproj.CopyComplete
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Modelo\obj\Debug\Modelo.dll
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Modelo\obj\Debug\Modelo.pdb

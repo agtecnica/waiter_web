@@ -1,0 +1,85 @@
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Dados\bin\Debug\Dados.dll.config
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Dados\bin\Debug\Dados.dll
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Dados\bin\Debug\Dados.pdb
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Dados\bin\Debug\EntityFramework.dll
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Dados\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Dados\bin\Debug\Modelo.dll
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Dados\bin\Debug\Modelo.pdb
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Dados\bin\Debug\Modelo.dll.config
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Dados\bin\Debug\EntityFramework.xml
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Dados\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Dados\obj\Debug\Dados.csprojResolveAssemblyReference.cache
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Dados\obj\Debug\Dados.csproj.CoreCompileInputs.cache
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Dados\obj\Debug\Dados.dll
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Dados\obj\Debug\Dados.pdb
+C:\Users\servidor\Google Drive\SuppSys\Dados\bin\Debug\Dados.dll.config
+C:\Users\servidor\Google Drive\SuppSys\Dados\bin\Debug\Dados.dll
+C:\Users\servidor\Google Drive\SuppSys\Dados\bin\Debug\Dados.pdb
+C:\Users\servidor\Google Drive\SuppSys\Dados\bin\Debug\EntityFramework.dll
+C:\Users\servidor\Google Drive\SuppSys\Dados\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\servidor\Google Drive\SuppSys\Dados\bin\Debug\Modelo.dll
+C:\Users\servidor\Google Drive\SuppSys\Dados\bin\Debug\Modelo.pdb
+C:\Users\servidor\Google Drive\SuppSys\Dados\bin\Debug\Modelo.dll.config
+C:\Users\servidor\Google Drive\SuppSys\Dados\bin\Debug\EntityFramework.xml
+C:\Users\servidor\Google Drive\SuppSys\Dados\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\servidor\Google Drive\SuppSys\Dados\obj\Debug\Dados.csprojResolveAssemblyReference.cache
+C:\Users\servidor\Google Drive\SuppSys\Dados\obj\Debug\Dados.csproj.CoreCompileInputs.cache
+C:\Users\servidor\Google Drive\SuppSys\Dados\obj\Debug\Dados.dll
+C:\Users\servidor\Google Drive\SuppSys\Dados\obj\Debug\Dados.pdb
+E:\Projetos de Programação\SuppSys\Dados\bin\Debug\Dados.dll.config
+E:\Projetos de Programação\SuppSys\Dados\bin\Debug\Dados.dll
+E:\Projetos de Programação\SuppSys\Dados\bin\Debug\Dados.pdb
+E:\Projetos de Programação\SuppSys\Dados\bin\Debug\EntityFramework.dll
+E:\Projetos de Programação\SuppSys\Dados\bin\Debug\EntityFramework.SqlServer.dll
+E:\Projetos de Programação\SuppSys\Dados\bin\Debug\Modelo.dll
+E:\Projetos de Programação\SuppSys\Dados\bin\Debug\Modelo.pdb
+E:\Projetos de Programação\SuppSys\Dados\bin\Debug\Modelo.dll.config
+E:\Projetos de Programação\SuppSys\Dados\bin\Debug\EntityFramework.xml
+E:\Projetos de Programação\SuppSys\Dados\bin\Debug\EntityFramework.SqlServer.xml
+E:\Projetos de Programação\SuppSys\Dados\obj\Debug\Dados.csprojResolveAssemblyReference.cache
+E:\Projetos de Programação\SuppSys\Dados\obj\Debug\Dados.csproj.CoreCompileInputs.cache
+E:\Projetos de Programação\SuppSys\Dados\obj\Debug\Dados.dll
+E:\Projetos de Programação\SuppSys\Dados\obj\Debug\Dados.pdb
+C:\Users\servidor\Desktop\SuppSys\Dados\bin\Debug\Dados.dll.config
+C:\Users\servidor\Desktop\SuppSys\Dados\bin\Debug\Dados.dll
+C:\Users\servidor\Desktop\SuppSys\Dados\bin\Debug\Dados.pdb
+C:\Users\servidor\Desktop\SuppSys\Dados\bin\Debug\EntityFramework.dll
+C:\Users\servidor\Desktop\SuppSys\Dados\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\servidor\Desktop\SuppSys\Dados\bin\Debug\Modelo.dll
+C:\Users\servidor\Desktop\SuppSys\Dados\bin\Debug\Modelo.pdb
+C:\Users\servidor\Desktop\SuppSys\Dados\bin\Debug\Modelo.dll.config
+C:\Users\servidor\Desktop\SuppSys\Dados\bin\Debug\EntityFramework.xml
+C:\Users\servidor\Desktop\SuppSys\Dados\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\servidor\Desktop\SuppSys\Dados\obj\Debug\Dados.csprojResolveAssemblyReference.cache
+C:\Users\servidor\Desktop\SuppSys\Dados\obj\Debug\Dados.csproj.CoreCompileInputs.cache
+C:\Users\servidor\Desktop\SuppSys\Dados\obj\Debug\Dados.dll
+C:\Users\servidor\Desktop\SuppSys\Dados\obj\Debug\Dados.pdb
+C:\Users\Andre Alves\SisPdv\SuppSys\Dados\bin\Debug\Dados.dll.config
+C:\Users\Andre Alves\SisPdv\SuppSys\Dados\bin\Debug\Dados.dll
+C:\Users\Andre Alves\SisPdv\SuppSys\Dados\bin\Debug\Dados.pdb
+C:\Users\Andre Alves\SisPdv\SuppSys\Dados\bin\Debug\EntityFramework.dll
+C:\Users\Andre Alves\SisPdv\SuppSys\Dados\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Andre Alves\SisPdv\SuppSys\Dados\bin\Debug\Modelo.dll
+C:\Users\Andre Alves\SisPdv\SuppSys\Dados\bin\Debug\Modelo.pdb
+C:\Users\Andre Alves\SisPdv\SuppSys\Dados\bin\Debug\Modelo.dll.config
+C:\Users\Andre Alves\SisPdv\SuppSys\Dados\bin\Debug\EntityFramework.xml
+C:\Users\Andre Alves\SisPdv\SuppSys\Dados\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Andre Alves\SisPdv\SuppSys\Dados\obj\Debug\Dados.csprojResolveAssemblyReference.cache
+C:\Users\Andre Alves\SisPdv\SuppSys\Dados\obj\Debug\Dados.csproj.CoreCompileInputs.cache
+C:\Users\Andre Alves\SisPdv\SuppSys\Dados\obj\Debug\Dados.dll
+C:\Users\Andre Alves\SisPdv\SuppSys\Dados\obj\Debug\Dados.pdb
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Dados\bin\Debug\Dados.dll.config
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Dados\bin\Debug\Dados.dll
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Dados\bin\Debug\Dados.pdb
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Dados\bin\Debug\EntityFramework.dll
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Dados\bin\Debug\EntityFramework.SqlServer.dll
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Dados\bin\Debug\Modelo.dll
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Dados\bin\Debug\Modelo.pdb
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Dados\bin\Debug\Modelo.dll.config
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Dados\bin\Debug\EntityFramework.xml
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Dados\bin\Debug\EntityFramework.SqlServer.xml
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Dados\obj\Debug\Dados.csprojAssemblyReference.cache
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Dados\obj\Debug\Dados.csproj.CoreCompileInputs.cache
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Dados\obj\Debug\Dados.csproj.CopyComplete
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Dados\obj\Debug\Dados.dll
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Dados\obj\Debug\Dados.pdb

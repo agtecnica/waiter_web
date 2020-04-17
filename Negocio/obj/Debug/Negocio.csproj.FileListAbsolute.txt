@@ -1,0 +1,85 @@
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Negocio\bin\Debug\Negocio.dll
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Negocio\bin\Debug\Dados.dll
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Negocio\bin\Debug\Modelo.dll
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Negocio\bin\Debug\EntityFramework.dll
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Negocio\bin\Debug\Dados.pdb
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Negocio\bin\Debug\Dados.dll.config
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Negocio\bin\Debug\Modelo.pdb
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Negocio\bin\Debug\Modelo.dll.config
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Negocio\bin\Debug\EntityFramework.xml
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Negocio\obj\Debug\Negocio.dll
+C:\Users\Andre Alves\OneDrive\SuppSystem\Projeto\SuppSys\Negocio\obj\Debug\Negocio.pdb
+C:\Users\servidor\Google Drive\SuppSys\Negocio\bin\Debug\Negocio.dll
+C:\Users\servidor\Google Drive\SuppSys\Negocio\bin\Debug\Negocio.pdb
+C:\Users\servidor\Google Drive\SuppSys\Negocio\bin\Debug\Dados.dll
+C:\Users\servidor\Google Drive\SuppSys\Negocio\bin\Debug\Modelo.dll
+C:\Users\servidor\Google Drive\SuppSys\Negocio\bin\Debug\EntityFramework.dll
+C:\Users\servidor\Google Drive\SuppSys\Negocio\bin\Debug\Dados.pdb
+C:\Users\servidor\Google Drive\SuppSys\Negocio\bin\Debug\Dados.dll.config
+C:\Users\servidor\Google Drive\SuppSys\Negocio\bin\Debug\Modelo.pdb
+C:\Users\servidor\Google Drive\SuppSys\Negocio\bin\Debug\Modelo.dll.config
+C:\Users\servidor\Google Drive\SuppSys\Negocio\bin\Debug\EntityFramework.xml
+C:\Users\servidor\Google Drive\SuppSys\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+C:\Users\servidor\Google Drive\SuppSys\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\servidor\Google Drive\SuppSys\Negocio\obj\Debug\Negocio.dll
+C:\Users\servidor\Google Drive\SuppSys\Negocio\obj\Debug\Negocio.pdb
+E:\Projetos de Programação\SuppSys\Negocio\bin\Debug\Negocio.dll
+E:\Projetos de Programação\SuppSys\Negocio\bin\Debug\Negocio.pdb
+E:\Projetos de Programação\SuppSys\Negocio\bin\Debug\Modelo.dll
+E:\Projetos de Programação\SuppSys\Negocio\bin\Debug\EntityFramework.dll
+E:\Projetos de Programação\SuppSys\Negocio\bin\Debug\Modelo.pdb
+E:\Projetos de Programação\SuppSys\Negocio\bin\Debug\Modelo.dll.config
+E:\Projetos de Programação\SuppSys\Negocio\bin\Debug\EntityFramework.xml
+E:\Projetos de Programação\SuppSys\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+E:\Projetos de Programação\SuppSys\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+E:\Projetos de Programação\SuppSys\Negocio\obj\Debug\Negocio.dll
+E:\Projetos de Programação\SuppSys\Negocio\obj\Debug\Negocio.pdb
+E:\Projetos de Programação\SuppSys\Negocio\bin\Debug\Dados.dll
+E:\Projetos de Programação\SuppSys\Negocio\bin\Debug\Dados.pdb
+E:\Projetos de Programação\SuppSys\Negocio\bin\Debug\Dados.dll.config
+C:\Users\servidor\Desktop\SuppSys\Negocio\bin\Debug\Negocio.dll
+C:\Users\servidor\Desktop\SuppSys\Negocio\bin\Debug\Negocio.pdb
+C:\Users\servidor\Desktop\SuppSys\Negocio\bin\Debug\Dados.dll
+C:\Users\servidor\Desktop\SuppSys\Negocio\bin\Debug\Modelo.dll
+C:\Users\servidor\Desktop\SuppSys\Negocio\bin\Debug\EntityFramework.dll
+C:\Users\servidor\Desktop\SuppSys\Negocio\bin\Debug\Dados.pdb
+C:\Users\servidor\Desktop\SuppSys\Negocio\bin\Debug\Dados.dll.config
+C:\Users\servidor\Desktop\SuppSys\Negocio\bin\Debug\Modelo.pdb
+C:\Users\servidor\Desktop\SuppSys\Negocio\bin\Debug\Modelo.dll.config
+C:\Users\servidor\Desktop\SuppSys\Negocio\bin\Debug\EntityFramework.xml
+C:\Users\servidor\Desktop\SuppSys\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+C:\Users\servidor\Desktop\SuppSys\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\servidor\Desktop\SuppSys\Negocio\obj\Debug\Negocio.dll
+C:\Users\servidor\Desktop\SuppSys\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Andre Alves\SisPdv\SuppSys\Negocio\bin\Debug\Negocio.dll
+C:\Users\Andre Alves\SisPdv\SuppSys\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Andre Alves\SisPdv\SuppSys\Negocio\bin\Debug\Dados.dll
+C:\Users\Andre Alves\SisPdv\SuppSys\Negocio\bin\Debug\Modelo.dll
+C:\Users\Andre Alves\SisPdv\SuppSys\Negocio\bin\Debug\EntityFramework.dll
+C:\Users\Andre Alves\SisPdv\SuppSys\Negocio\bin\Debug\Dados.pdb
+C:\Users\Andre Alves\SisPdv\SuppSys\Negocio\bin\Debug\Dados.dll.config
+C:\Users\Andre Alves\SisPdv\SuppSys\Negocio\bin\Debug\Modelo.pdb
+C:\Users\Andre Alves\SisPdv\SuppSys\Negocio\bin\Debug\Modelo.dll.config
+C:\Users\Andre Alves\SisPdv\SuppSys\Negocio\bin\Debug\EntityFramework.xml
+C:\Users\Andre Alves\SisPdv\SuppSys\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+C:\Users\Andre Alves\SisPdv\SuppSys\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Andre Alves\SisPdv\SuppSys\Negocio\obj\Debug\Negocio.dll
+C:\Users\Andre Alves\SisPdv\SuppSys\Negocio\obj\Debug\Negocio.pdb
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Negocio\bin\Debug\Negocio.dll
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Negocio\bin\Debug\Negocio.pdb
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Negocio\bin\Debug\Dados.dll
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Negocio\bin\Debug\Modelo.dll
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Negocio\bin\Debug\EntityFramework.dll
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Negocio\bin\Debug\Dados.pdb
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Negocio\bin\Debug\Dados.dll.config
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Negocio\bin\Debug\Modelo.pdb
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Negocio\bin\Debug\Modelo.dll.config
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Negocio\bin\Debug\EntityFramework.xml
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Negocio\obj\Debug\Negocio.dll
+F:\Projetos_de_Programacao\SuppSys\SuppSys\Negocio\obj\Debug\Negocio.pdb

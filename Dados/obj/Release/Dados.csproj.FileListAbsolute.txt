@@ -1,0 +1,14 @@
+C:\Users\Andre Alves\SisPdv\SuppSys\Dados\bin\Release\Dados.dll.config
+C:\Users\Andre Alves\SisPdv\SuppSys\Dados\bin\Release\Dados.dll
+C:\Users\Andre Alves\SisPdv\SuppSys\Dados\bin\Release\Dados.pdb
+C:\Users\Andre Alves\SisPdv\SuppSys\Dados\bin\Release\EntityFramework.dll
+C:\Users\Andre Alves\SisPdv\SuppSys\Dados\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Andre Alves\SisPdv\SuppSys\Dados\bin\Release\Modelo.dll
+C:\Users\Andre Alves\SisPdv\SuppSys\Dados\bin\Release\Modelo.pdb
+C:\Users\Andre Alves\SisPdv\SuppSys\Dados\bin\Release\Modelo.dll.config
+C:\Users\Andre Alves\SisPdv\SuppSys\Dados\bin\Release\EntityFramework.xml
+C:\Users\Andre Alves\SisPdv\SuppSys\Dados\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Andre Alves\SisPdv\SuppSys\Dados\obj\Release\Dados.csprojResolveAssemblyReference.cache
+C:\Users\Andre Alves\SisPdv\SuppSys\Dados\obj\Release\Dados.csproj.CoreCompileInputs.cache
+C:\Users\Andre Alves\SisPdv\SuppSys\Dados\obj\Release\Dados.dll
+C:\Users\Andre Alves\SisPdv\SuppSys\Dados\obj\Release\Dados.pdb

@@ -1,0 +1,782 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SuppSysModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Categoria">
+    <Key>
+      <PropertyRef Name="CategoriaId" />
+    </Key>
+    <Property Name="CategoriaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descricao" Type="varchar" MaxLength="150" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cidade">
+    <Key>
+      <PropertyRef Name="CidadeId" />
+    </Key>
+    <Property Name="CidadeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="EstadoId" Type="int" Nullable="false" />
+    <Property Name="CodigoIbge" Type="int" />
+    <Property Name="DensidadeDemo" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="Gentilico" Type="varchar" MaxLength="100" />
+    <Property Name="Area" Type="numeric" Precision="10" Scale="3" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="ClienteId" />
+    </Key>
+    <Property Name="ClienteId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NomeRazaoSocial" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="EnderecoId" Type="int" Nullable="false" />
+    <Property Name="ContatoId" Type="int" />
+    <Property Name="DocumentosId" Type="int" />
+    <Property Name="TipoPessoa" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="Observacao" Type="varchar" MaxLength="300" />
+    <Property Name="Ativo" Type="bit" Nullable="false" />
+    <Property Name="DadosBancariosId" Type="int" />
+    <Property Name="Sexo" Type="char" MaxLength="1" />
+    <Property Name="Apelido" Type="varchar" MaxLength="50" />
+    <Property Name="NomeFantasia" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Contato">
+    <Key>
+      <PropertyRef Name="ContatoId" />
+    </Key>
+    <Property Name="ContatoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Telefone1" Type="varchar" MaxLength="14" />
+    <Property Name="Telefone2" Type="varchar" MaxLength="14" />
+    <Property Name="Celular1" Type="varchar" MaxLength="15" />
+    <Property Name="Celular2" Type="varchar" MaxLength="15" />
+    <Property Name="Email" Type="varchar" MaxLength="30" />
+    <Property Name="Site" Type="varchar" MaxLength="30" />
+    <Property Name="Facebook" Type="varchar" MaxLength="100" />
+    <Property Name="Twitter" Type="varchar" MaxLength="100" />
+    <Property Name="Youtube" Type="varchar" MaxLength="100" />
+    <Property Name="Instagram" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="DadosBancarios">
+    <Key>
+      <PropertyRef Name="DadosBancariosId" />
+    </Key>
+    <Property Name="DadosBancariosId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Banco" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Agencia" Type="varchar" MaxLength="20" />
+    <Property Name="Conta" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Documentos">
+    <Key>
+      <PropertyRef Name="DocumentosId" />
+    </Key>
+    <Property Name="DocumentosId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RG" Type="varchar" MaxLength="11" />
+    <Property Name="CPF" Type="varchar" MaxLength="12" />
+    <Property Name="CNH" Type="varchar" MaxLength="20" />
+    <Property Name="TituloEleitor" Type="varchar" MaxLength="20" />
+    <Property Name="CertidaoMilitar" Type="varchar" MaxLength="20" />
+    <Property Name="Ctps" Type="varchar" MaxLength="20" />
+    <Property Name="SerieCtps" Type="varchar" MaxLength="20" />
+    <Property Name="IE" Type="varchar" MaxLength="20" />
+    <Property Name="CNPJ" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Empresa">
+    <Key>
+      <PropertyRef Name="EmpresaId" />
+    </Key>
+    <Property Name="EmpresaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RazaoSocial" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="EnderecoId" Type="int" Nullable="false" />
+    <Property Name="DocumentosId" Type="int" />
+    <Property Name="Logo" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Endereco">
+    <Key>
+      <PropertyRef Name="EnderecoId" />
+    </Key>
+    <Property Name="EnderecoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Logradouro" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Numero" Type="int" />
+    <Property Name="Complemento" Type="varchar" MaxLength="500" />
+    <Property Name="Cep" Type="varchar" MaxLength="8" />
+    <Property Name="Bairro" Type="varchar" MaxLength="50" />
+    <Property Name="CidadeId" Type="int" />
+    <Property Name="EstadoId" Type="int" />
+    <Property Name="PaisId" Type="int" />
+  </EntityType>
+  <EntityType Name="Estado">
+    <Key>
+      <PropertyRef Name="EstadoId" />
+    </Key>
+    <Property Name="EstadoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Sigla" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="Regiao" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SuppSys.dbo.Estoque' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Estoque">
+    <Key>
+      <PropertyRef Name="ProdutoId" />
+      <PropertyRef Name="EstoqueReal" />
+      <PropertyRef Name="EstoqueDisponivel" />
+    </Key>
+    <Property Name="ProdutoId" Type="int" Nullable="false" />
+    <Property Name="FornecedorId" Type="int" />
+    <Property Name="DataUltEntrada" Type="datetime" />
+    <Property Name="DataUltSaida" Type="datetime" />
+    <Property Name="QtdeUltEntrada" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="QtdeUltSaida" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="EstoqueReservado" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="EstoqueReal" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="EstoqueDisponivel" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="EmpresaId" Type="int" />
+  </EntityType>
+  <EntityType Name="EstoqueMovimentacao">
+    <Key>
+      <PropertyRef Name="EstoqueMovimentacaoId" />
+    </Key>
+    <Property Name="EstoqueMovimentacaoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TipoMovimentacao" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="PedidoId" Type="int" Nullable="false" />
+    <Property Name="ProdutoId" Type="int" Nullable="false" />
+    <Property Name="Quantidade" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="MovimentoCancelado" Type="bit" />
+    <Property Name="EmpresaId" Type="int" />
+  </EntityType>
+  <EntityType Name="Fornecedor">
+    <Key>
+      <PropertyRef Name="FornecedorId" />
+    </Key>
+    <Property Name="FornecedorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NomeRazaoSocial" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="EnderecoId" Type="int" Nullable="false" />
+    <Property Name="ContatoId" Type="int" />
+    <Property Name="DocumentosId" Type="int" />
+    <Property Name="TipoPessoa" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="Observacao" Type="varchar" MaxLength="300" />
+    <Property Name="Ativo" Type="bit" Nullable="false" />
+    <Property Name="DadosBancariosId" Type="int" />
+  </EntityType>
+  <EntityType Name="Marca">
+    <Key>
+      <PropertyRef Name="MarcaId" />
+    </Key>
+    <Property Name="MarcaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descricao" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Pedido">
+    <Key>
+      <PropertyRef Name="PedidoId" />
+    </Key>
+    <Property Name="PedidoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tipo" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="DataEmissao" Type="datetime" Nullable="false" />
+    <Property Name="ClienteId" Type="int" />
+    <Property Name="FornecedorId" Type="int" />
+    <Property Name="UsuarioId" Type="int" Nullable="false" />
+    <Property Name="NumeroNf" Type="varchar" MaxLength="50" />
+    <Property Name="ValorTotal" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="StatusPedidoId" Type="int" Nullable="false" />
+    <Property Name="NrParcelas" Type="int" />
+    <Property Name="DataCancelamento" Type="datetime" />
+    <Property Name="NrOrcamentoFornecedor" Type="varchar" MaxLength="50" />
+    <Property Name="ValidadeProposta" Type="date" />
+    <Property Name="Frete" Type="char" MaxLength="3" />
+    <Property Name="TransportadorId" Type="int" />
+    <Property Name="ValorFrete" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IsCotacao" Type="bit" Nullable="false" />
+    <Property Name="DataInicialPgto" Type="datetime" />
+    <Property Name="Observacao" Type="varchar" MaxLength="300" />
+    <Property Name="Desconto" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Acrescimo" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Lote" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="PedidoItem">
+    <Key>
+      <PropertyRef Name="PedidoItemId" />
+    </Key>
+    <Property Name="PedidoItemId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PedidoId" Type="int" Nullable="false" />
+    <Property Name="ProdutoId" Type="int" Nullable="false" />
+    <Property Name="Quantidade" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="PerctDesconto" Type="decimal" Precision="5" Scale="2" />
+    <Property Name="PerctAcrescimo" Type="decimal" Precision="5" Scale="2" />
+    <Property Name="ValorDesconto" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SubTotal" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="DiasPrevisaoEntrega" Type="smallint" />
+    <Property Name="DataEntrega" Type="date" />
+    <Property Name="ObservacaoItem" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="Produto">
+    <Key>
+      <PropertyRef Name="ProdutoId" />
+    </Key>
+    <Property Name="ProdutoId" Type="int" Nullable="false" />
+    <Property Name="Descricao" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ValorCompra" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CategoriaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubCategoriaId" Type="int" />
+    <Property Name="ValorVenda" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CodigoBarras" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="UnidMedidaId" Type="int" />
+    <Property Name="QtdeUnitaria" Type="tinyint" />
+    <Property Name="QtdeMaster" Type="tinyint" />
+    <Property Name="MarcaId" Type="int" />
+    <Property Name="FornecedorId" Type="int" Nullable="false" />
+    <Property Name="Descontinuado" Type="bit" />
+    <Property Name="Lucro" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="QtdeMinEstoque" Type="tinyint" />
+    <Property Name="QtdeMaxEstoque" Type="tinyint" />
+    <Property Name="PrazoValidade" Type="smallint" />
+    <Property Name="Bloqueado" Type="bit" />
+  </EntityType>
+  <EntityType Name="StatusPedido">
+    <Key>
+      <PropertyRef Name="StatusPedidoId" />
+    </Key>
+    <Property Name="StatusPedidoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descricao" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SubCategoria">
+    <Key>
+      <PropertyRef Name="SubCategoriaId" />
+    </Key>
+    <Property Name="SubCategoriaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descricao" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="CategoriaId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Transportador">
+    <Key>
+      <PropertyRef Name="TransportadorId" />
+    </Key>
+    <Property Name="TransportadorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NomeRazaoSocial" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="EnderecoId" Type="int" Nullable="false" />
+    <Property Name="ContatoId" Type="int" />
+    <Property Name="DocumentosId" Type="int" />
+    <Property Name="TipoPessoa" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="Observacao" Type="varchar" MaxLength="300" />
+    <Property Name="Ativo" Type="bit" Nullable="false" />
+    <Property Name="DadosBancariosId" Type="int" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="UsuarioId" />
+    </Key>
+    <Property Name="UsuarioId" Type="int" Nullable="false" />
+    <Property Name="Nome" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Login" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Senha" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Ativo" Type="bit" Nullable="false" />
+    <Property Name="Tentativas" Type="smallint" />
+    <Property Name="Observacao" Type="varchar" MaxLength="300" />
+    <Property Name="DataExpiraSenha" Type="date" />
+  </EntityType>
+  <Association Name="FK_Cidade_Estado">
+    <End Role="Estado" Type="Self.Estado" Multiplicity="1" />
+    <End Role="Cidade" Type="Self.Cidade" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="EstadoId" />
+      </Principal>
+      <Dependent Role="Cidade">
+        <PropertyRef Name="EstadoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Empresa_Documentos">
+    <End Role="Documentos" Type="Self.Documentos" Multiplicity="0..1" />
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Documentos">
+        <PropertyRef Name="DocumentosId" />
+      </Principal>
+      <Dependent Role="Empresa">
+        <PropertyRef Name="DocumentosId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Endereco_Cidade">
+    <End Role="Cidade" Type="Self.Cidade" Multiplicity="0..1" />
+    <End Role="Endereco" Type="Self.Endereco" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cidade">
+        <PropertyRef Name="CidadeId" />
+      </Principal>
+      <Dependent Role="Endereco">
+        <PropertyRef Name="CidadeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Endereco_Empresa">
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="1" />
+    <End Role="Endereco" Type="Self.Endereco" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="EmpresaId" />
+      </Principal>
+      <Dependent Role="Endereco">
+        <PropertyRef Name="EnderecoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Endereco_Estado">
+    <End Role="Estado" Type="Self.Estado" Multiplicity="0..1" />
+    <End Role="Endereco" Type="Self.Endereco" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="EstadoId" />
+      </Principal>
+      <Dependent Role="Endereco">
+        <PropertyRef Name="EstadoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Estoque_Produto">
+    <End Role="Produto" Type="Self.Produto" Multiplicity="1" />
+    <End Role="Estoque" Type="Self.Estoque" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produto">
+        <PropertyRef Name="ProdutoId" />
+      </Principal>
+      <Dependent Role="Estoque">
+        <PropertyRef Name="ProdutoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstoqueMovimentacao_Empresa">
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="0..1" />
+    <End Role="EstoqueMovimentacao" Type="Self.EstoqueMovimentacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="EmpresaId" />
+      </Principal>
+      <Dependent Role="EstoqueMovimentacao">
+        <PropertyRef Name="EmpresaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstoqueMovimentacao_Pedido">
+    <End Role="Pedido" Type="Self.Pedido" Multiplicity="1" />
+    <End Role="EstoqueMovimentacao" Type="Self.EstoqueMovimentacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pedido">
+        <PropertyRef Name="PedidoId" />
+      </Principal>
+      <Dependent Role="EstoqueMovimentacao">
+        <PropertyRef Name="PedidoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstoqueMovimentacao_Produto">
+    <End Role="Produto" Type="Self.Produto" Multiplicity="1" />
+    <End Role="EstoqueMovimentacao" Type="Self.EstoqueMovimentacao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produto">
+        <PropertyRef Name="ProdutoId" />
+      </Principal>
+      <Dependent Role="EstoqueMovimentacao">
+        <PropertyRef Name="ProdutoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fornecedor_Contato">
+    <End Role="Contato" Type="Self.Contato" Multiplicity="0..1" />
+    <End Role="Fornecedor" Type="Self.Fornecedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contato">
+        <PropertyRef Name="ContatoId" />
+      </Principal>
+      <Dependent Role="Fornecedor">
+        <PropertyRef Name="ContatoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fornecedor_DadosBancarios">
+    <End Role="DadosBancarios" Type="Self.DadosBancarios" Multiplicity="0..1" />
+    <End Role="Fornecedor" Type="Self.Fornecedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DadosBancarios">
+        <PropertyRef Name="DadosBancariosId" />
+      </Principal>
+      <Dependent Role="Fornecedor">
+        <PropertyRef Name="DadosBancariosId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fornecedor_Documentos">
+    <End Role="Documentos" Type="Self.Documentos" Multiplicity="0..1" />
+    <End Role="Fornecedor" Type="Self.Fornecedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Documentos">
+        <PropertyRef Name="DocumentosId" />
+      </Principal>
+      <Dependent Role="Fornecedor">
+        <PropertyRef Name="DocumentosId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fornecedor_Endereco">
+    <End Role="Endereco" Type="Self.Endereco" Multiplicity="1" />
+    <End Role="Fornecedor" Type="Self.Fornecedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Endereco">
+        <PropertyRef Name="EnderecoId" />
+      </Principal>
+      <Dependent Role="Fornecedor">
+        <PropertyRef Name="EnderecoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pedido_Cliente">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
+    <End Role="Pedido" Type="Self.Pedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="ClienteId" />
+      </Principal>
+      <Dependent Role="Pedido">
+        <PropertyRef Name="ClienteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pedido_Fornecedor">
+    <End Role="Fornecedor" Type="Self.Fornecedor" Multiplicity="0..1" />
+    <End Role="Pedido" Type="Self.Pedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fornecedor">
+        <PropertyRef Name="FornecedorId" />
+      </Principal>
+      <Dependent Role="Pedido">
+        <PropertyRef Name="FornecedorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pedido_StatusPedido">
+    <End Role="StatusPedido" Type="Self.StatusPedido" Multiplicity="1" />
+    <End Role="Pedido" Type="Self.Pedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusPedido">
+        <PropertyRef Name="StatusPedidoId" />
+      </Principal>
+      <Dependent Role="Pedido">
+        <PropertyRef Name="StatusPedidoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pedido_Transportador">
+    <End Role="Transportador" Type="Self.Transportador" Multiplicity="0..1" />
+    <End Role="Pedido" Type="Self.Pedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transportador">
+        <PropertyRef Name="TransportadorId" />
+      </Principal>
+      <Dependent Role="Pedido">
+        <PropertyRef Name="TransportadorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pedido_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Pedido" Type="Self.Pedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UsuarioId" />
+      </Principal>
+      <Dependent Role="Pedido">
+        <PropertyRef Name="UsuarioId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PedidoItem_Pedido">
+    <End Role="Pedido" Type="Self.Pedido" Multiplicity="1" />
+    <End Role="PedidoItem" Type="Self.PedidoItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pedido">
+        <PropertyRef Name="PedidoId" />
+      </Principal>
+      <Dependent Role="PedidoItem">
+        <PropertyRef Name="PedidoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PedidoItem_Produto">
+    <End Role="Produto" Type="Self.Produto" Multiplicity="1" />
+    <End Role="PedidoItem" Type="Self.PedidoItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produto">
+        <PropertyRef Name="ProdutoId" />
+      </Principal>
+      <Dependent Role="PedidoItem">
+        <PropertyRef Name="ProdutoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Produto_CategoriaId">
+    <End Role="Categoria" Type="Self.Categoria" Multiplicity="1" />
+    <End Role="Produto" Type="Self.Produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categoria">
+        <PropertyRef Name="CategoriaId" />
+      </Principal>
+      <Dependent Role="Produto">
+        <PropertyRef Name="CategoriaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Produto_Fornecedor">
+    <End Role="Fornecedor" Type="Self.Fornecedor" Multiplicity="1" />
+    <End Role="Produto" Type="Self.Produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fornecedor">
+        <PropertyRef Name="FornecedorId" />
+      </Principal>
+      <Dependent Role="Produto">
+        <PropertyRef Name="FornecedorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Produto_Marca">
+    <End Role="Marca" Type="Self.Marca" Multiplicity="0..1" />
+    <End Role="Produto" Type="Self.Produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Marca">
+        <PropertyRef Name="MarcaId" />
+      </Principal>
+      <Dependent Role="Produto">
+        <PropertyRef Name="MarcaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Produto_SubCategoria">
+    <End Role="SubCategoria" Type="Self.SubCategoria" Multiplicity="0..1" />
+    <End Role="Produto" Type="Self.Produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubCategoria">
+        <PropertyRef Name="SubCategoriaId" />
+      </Principal>
+      <Dependent Role="Produto">
+        <PropertyRef Name="SubCategoriaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubCategoria_Categoria">
+    <End Role="Categoria" Type="Self.Categoria" Multiplicity="1" />
+    <End Role="SubCategoria" Type="Self.SubCategoria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categoria">
+        <PropertyRef Name="CategoriaId" />
+      </Principal>
+      <Dependent Role="SubCategoria">
+        <PropertyRef Name="CategoriaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transportador_Contato">
+    <End Role="Contato" Type="Self.Contato" Multiplicity="0..1" />
+    <End Role="Transportador" Type="Self.Transportador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contato">
+        <PropertyRef Name="ContatoId" />
+      </Principal>
+      <Dependent Role="Transportador">
+        <PropertyRef Name="ContatoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transportador_DadosBancarios">
+    <End Role="DadosBancarios" Type="Self.DadosBancarios" Multiplicity="0..1" />
+    <End Role="Transportador" Type="Self.Transportador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DadosBancarios">
+        <PropertyRef Name="DadosBancariosId" />
+      </Principal>
+      <Dependent Role="Transportador">
+        <PropertyRef Name="DadosBancariosId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transportador_Documentos">
+    <End Role="Documentos" Type="Self.Documentos" Multiplicity="0..1" />
+    <End Role="Transportador" Type="Self.Transportador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Documentos">
+        <PropertyRef Name="DocumentosId" />
+      </Principal>
+      <Dependent Role="Transportador">
+        <PropertyRef Name="DocumentosId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transportador_Endereco">
+    <End Role="Endereco" Type="Self.Endereco" Multiplicity="1" />
+    <End Role="Transportador" Type="Self.Transportador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Endereco">
+        <PropertyRef Name="EnderecoId" />
+      </Principal>
+      <Dependent Role="Transportador">
+        <PropertyRef Name="EnderecoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SuppSysModelStoreContainer">
+    <EntitySet Name="Categoria" EntityType="Self.Categoria" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cidade" EntityType="Self.Cidade" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contato" EntityType="Self.Contato" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DadosBancarios" EntityType="Self.DadosBancarios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Documentos" EntityType="Self.Documentos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Empresa" EntityType="Self.Empresa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Endereco" EntityType="Self.Endereco" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Estado" EntityType="Self.Estado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EstoqueMovimentacao" EntityType="Self.EstoqueMovimentacao" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Fornecedor" EntityType="Self.Fornecedor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Marca" EntityType="Self.Marca" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pedido" EntityType="Self.Pedido" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PedidoItem" EntityType="Self.PedidoItem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Produto" EntityType="Self.Produto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StatusPedido" EntityType="Self.StatusPedido" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SubCategoria" EntityType="Self.SubCategoria" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transportador" EntityType="Self.Transportador" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Estoque" EntityType="Self.Estoque" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Estoque].[ProdutoId] AS [ProdutoId], 
+    [Estoque].[FornecedorId] AS [FornecedorId], 
+    [Estoque].[DataUltEntrada] AS [DataUltEntrada], 
+    [Estoque].[DataUltSaida] AS [DataUltSaida], 
+    [Estoque].[QtdeUltEntrada] AS [QtdeUltEntrada], 
+    [Estoque].[QtdeUltSaida] AS [QtdeUltSaida], 
+    [Estoque].[EstoqueReservado] AS [EstoqueReservado], 
+    [Estoque].[EstoqueReal] AS [EstoqueReal], 
+    [Estoque].[EstoqueDisponivel] AS [EstoqueDisponivel], 
+    [Estoque].[EmpresaId] AS [EmpresaId]
+    FROM [dbo].[Estoque] AS [Estoque]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Cidade_Estado" Association="Self.FK_Cidade_Estado">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Cidade" EntitySet="Cidade" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Empresa_Documentos" Association="Self.FK_Empresa_Documentos">
+      <End Role="Documentos" EntitySet="Documentos" />
+      <End Role="Empresa" EntitySet="Empresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Endereco_Cidade" Association="Self.FK_Endereco_Cidade">
+      <End Role="Cidade" EntitySet="Cidade" />
+      <End Role="Endereco" EntitySet="Endereco" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Endereco_Empresa" Association="Self.FK_Endereco_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Endereco" EntitySet="Endereco" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Endereco_Estado" Association="Self.FK_Endereco_Estado">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Endereco" EntitySet="Endereco" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Estoque_Produto" Association="Self.FK_Estoque_Produto">
+      <End Role="Produto" EntitySet="Produto" />
+      <End Role="Estoque" EntitySet="Estoque" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstoqueMovimentacao_Empresa" Association="Self.FK_EstoqueMovimentacao_Empresa">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="EstoqueMovimentacao" EntitySet="EstoqueMovimentacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstoqueMovimentacao_Pedido" Association="Self.FK_EstoqueMovimentacao_Pedido">
+      <End Role="Pedido" EntitySet="Pedido" />
+      <End Role="EstoqueMovimentacao" EntitySet="EstoqueMovimentacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstoqueMovimentacao_Produto" Association="Self.FK_EstoqueMovimentacao_Produto">
+      <End Role="Produto" EntitySet="Produto" />
+      <End Role="EstoqueMovimentacao" EntitySet="EstoqueMovimentacao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fornecedor_Contato" Association="Self.FK_Fornecedor_Contato">
+      <End Role="Contato" EntitySet="Contato" />
+      <End Role="Fornecedor" EntitySet="Fornecedor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fornecedor_DadosBancarios" Association="Self.FK_Fornecedor_DadosBancarios">
+      <End Role="DadosBancarios" EntitySet="DadosBancarios" />
+      <End Role="Fornecedor" EntitySet="Fornecedor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fornecedor_Documentos" Association="Self.FK_Fornecedor_Documentos">
+      <End Role="Documentos" EntitySet="Documentos" />
+      <End Role="Fornecedor" EntitySet="Fornecedor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fornecedor_Endereco" Association="Self.FK_Fornecedor_Endereco">
+      <End Role="Endereco" EntitySet="Endereco" />
+      <End Role="Fornecedor" EntitySet="Fornecedor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pedido_Cliente" Association="Self.FK_Pedido_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Pedido" EntitySet="Pedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pedido_Fornecedor" Association="Self.FK_Pedido_Fornecedor">
+      <End Role="Fornecedor" EntitySet="Fornecedor" />
+      <End Role="Pedido" EntitySet="Pedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pedido_StatusPedido" Association="Self.FK_Pedido_StatusPedido">
+      <End Role="StatusPedido" EntitySet="StatusPedido" />
+      <End Role="Pedido" EntitySet="Pedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pedido_Transportador" Association="Self.FK_Pedido_Transportador">
+      <End Role="Transportador" EntitySet="Transportador" />
+      <End Role="Pedido" EntitySet="Pedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pedido_Usuario" Association="Self.FK_Pedido_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Pedido" EntitySet="Pedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PedidoItem_Pedido" Association="Self.FK_PedidoItem_Pedido">
+      <End Role="Pedido" EntitySet="Pedido" />
+      <End Role="PedidoItem" EntitySet="PedidoItem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PedidoItem_Produto" Association="Self.FK_PedidoItem_Produto">
+      <End Role="Produto" EntitySet="Produto" />
+      <End Role="PedidoItem" EntitySet="PedidoItem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Produto_CategoriaId" Association="Self.FK_Produto_CategoriaId">
+      <End Role="Categoria" EntitySet="Categoria" />
+      <End Role="Produto" EntitySet="Produto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Produto_Fornecedor" Association="Self.FK_Produto_Fornecedor">
+      <End Role="Fornecedor" EntitySet="Fornecedor" />
+      <End Role="Produto" EntitySet="Produto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Produto_Marca" Association="Self.FK_Produto_Marca">
+      <End Role="Marca" EntitySet="Marca" />
+      <End Role="Produto" EntitySet="Produto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Produto_SubCategoria" Association="Self.FK_Produto_SubCategoria">
+      <End Role="SubCategoria" EntitySet="SubCategoria" />
+      <End Role="Produto" EntitySet="Produto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubCategoria_Categoria" Association="Self.FK_SubCategoria_Categoria">
+      <End Role="Categoria" EntitySet="Categoria" />
+      <End Role="SubCategoria" EntitySet="SubCategoria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transportador_Contato" Association="Self.FK_Transportador_Contato">
+      <End Role="Contato" EntitySet="Contato" />
+      <End Role="Transportador" EntitySet="Transportador" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transportador_DadosBancarios" Association="Self.FK_Transportador_DadosBancarios">
+      <End Role="DadosBancarios" EntitySet="DadosBancarios" />
+      <End Role="Transportador" EntitySet="Transportador" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transportador_Documentos" Association="Self.FK_Transportador_Documentos">
+      <End Role="Documentos" EntitySet="Documentos" />
+      <End Role="Transportador" EntitySet="Transportador" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transportador_Endereco" Association="Self.FK_Transportador_Endereco">
+      <End Role="Endereco" EntitySet="Endereco" />
+      <End Role="Transportador" EntitySet="Transportador" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

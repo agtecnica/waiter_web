@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ee947f62d5a646f882c6a9080f91c588" Name="Diagram1">
+        <EntityTypeShape EntityType="SuppSysModel.Categoria" Width="1.5" PointX="15" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuppSysModel.Cidade" Width="1.5" PointX="0.75" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuppSysModel.Cliente" Width="1.5" PointX="3" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuppSysModel.Empresa" Width="1.5" PointX="6" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuppSysModel.Estado" Width="1.5" PointX="0.75" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuppSysModel.Estoque" Width="1.5" PointX="19.5" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuppSysModel.EstoqueMovimentacao" Width="1.5" PointX="22.5" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuppSysModel.Fornecedor" Width="1.5" PointX="9" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuppSysModel.Marca" Width="1.5" PointX="15" PointY="25.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuppSysModel.Pedido" Width="1.5" PointX="14.25" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuppSysModel.PedidoItem" Width="1.5" PointX="22.5" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuppSysModel.Produto" Width="1.5" PointX="17.25" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuppSysModel.StatusPedido" Width="1.5" PointX="12" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuppSysModel.SubCategoria" Width="1.5" PointX="15" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuppSysModel.Transportador" Width="1.5" PointX="12" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuppSysModel.UnidadeMedida" Width="1.5" PointX="15" PointY="30.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuppSysModel.Usuario" Width="1.5" PointX="12" PointY="26" IsExpanded="true" />
+        <AssociationConnector Association="SuppSysModel.FK_Produto_CategoriaId" ManuallyRouted="false" />
+        <AssociationConnector Association="SuppSysModel.FK_SubCategoria_Categoria" ManuallyRouted="false" />
+        <AssociationConnector Association="SuppSysModel.FK_Cliente_Cidade" ManuallyRouted="false" />
+        <AssociationConnector Association="SuppSysModel.FK_Empresa_Cidade" ManuallyRouted="false" />
+        <AssociationConnector Association="SuppSysModel.FK_Fornecedor_Cidade" ManuallyRouted="false" />
+        <AssociationConnector Association="SuppSysModel.FK_Transportador_Cidade" ManuallyRouted="false" />
+        <AssociationConnector Association="SuppSysModel.FK_Cliente_Estado" ManuallyRouted="false" />
+        <AssociationConnector Association="SuppSysModel.FK_Pedido_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="SuppSysModel.FK_Empresa_Estado" ManuallyRouted="false" />
+        <AssociationConnector Association="SuppSysModel.FK_EstoqueMovimentacao_Empresa" ManuallyRouted="false" />
+        <AssociationConnector Association="SuppSysModel.FK_Fornecedor_Estado" ManuallyRouted="false" />
+        <AssociationConnector Association="SuppSysModel.FK_Transportador_Estado" ManuallyRouted="false" />
+        <AssociationConnector Association="SuppSysModel.FK_Estoque_Produto" ManuallyRouted="false" />
+        <AssociationConnector Association="SuppSysModel.FK_EstoqueMovimentacao_Pedido" ManuallyRouted="false" />
+        <AssociationConnector Association="SuppSysModel.FK_EstoqueMovimentacao_Produto" ManuallyRouted="false" />
+        <AssociationConnector Association="SuppSysModel.FK_Pedido_Fornecedor" ManuallyRouted="false" />
+        <AssociationConnector Association="SuppSysModel.FK_Produto_Fornecedor" ManuallyRouted="false" />
+        <AssociationConnector Association="SuppSysModel.FK_Produto_Marca" ManuallyRouted="false" />
+        <AssociationConnector Association="SuppSysModel.FK_Pedido_StatusPedido" ManuallyRouted="false" />
+        <AssociationConnector Association="SuppSysModel.FK_Pedido_Transportador" ManuallyRouted="false" />
+        <AssociationConnector Association="SuppSysModel.FK_Pedido_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="SuppSysModel.FK_PedidoItem_Pedido" ManuallyRouted="false" />
+        <AssociationConnector Association="SuppSysModel.FK_PedidoItem_Produto" ManuallyRouted="false" />
+        <AssociationConnector Association="SuppSysModel.FK_Produto_SubCategoria" ManuallyRouted="false" />
+        <AssociationConnector Association="SuppSysModel.FK_Produto_UnidadeMedida" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

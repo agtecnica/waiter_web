@@ -1,0 +1,11 @@
+C:\Users\Andre Alves\SisPdv\SuppSys\Modelo\bin\Release\Modelo.dll.config
+C:\Users\Andre Alves\SisPdv\SuppSys\Modelo\bin\Release\Modelo.dll
+C:\Users\Andre Alves\SisPdv\SuppSys\Modelo\bin\Release\Modelo.pdb
+C:\Users\Andre Alves\SisPdv\SuppSys\Modelo\bin\Release\EntityFramework.dll
+C:\Users\Andre Alves\SisPdv\SuppSys\Modelo\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Andre Alves\SisPdv\SuppSys\Modelo\bin\Release\EntityFramework.xml
+C:\Users\Andre Alves\SisPdv\SuppSys\Modelo\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Andre Alves\SisPdv\SuppSys\Modelo\obj\Release\Modelo.csprojResolveAssemblyReference.cache
+C:\Users\Andre Alves\SisPdv\SuppSys\Modelo\obj\Release\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\Andre Alves\SisPdv\SuppSys\Modelo\obj\Release\Modelo.dll
+C:\Users\Andre Alves\SisPdv\SuppSys\Modelo\obj\Release\Modelo.pdb
